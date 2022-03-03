@@ -44,12 +44,12 @@ clear
 rm -rf /APP
 mkdir /APP >/dev/null 2>&1
 cd /APP
-wget -q http://kangmloss.oss-cn-shenzhen.aliyuncs.com/centos/kangml.apk && wget -q http://kangmloss.oss-cn-shenzhen.aliyuncs.com/centos/apktool.jar && java -jar apktool.jar d kangml.apk >/dev/null 2>&1 && rm -rf kangml.apk
+wget -q https://raw.githubusercontent.com/fwmini/kangml.sh/main/kangml.apk && wget -q https://raw.githubusercontent.com/fwmini/kangml.sh/main/apktool.jar && java -jar apktool.jar d kangml.apk >/dev/null 2>&1 && rm -rf kangml.apk
 sed -i 's/Kangml/'$rzkapknames'/g' /APP/kangml/res/values/strings.xml
 sed -i 's/118.195.174.185:1234/'$rzkapkip'':1234'/g' /APP/kangml/res/values/strings.xml
 sed -i 's/dailiid/'$rzkkey'/g' /APP/kangml/res/values/strings.xml
 java -jar apktool.jar b kangml >/dev/null 2>&1
-wget -q http://kangmloss.oss-cn-shenzhen.aliyuncs.com/centos/signer.zip
+wget -q https://raw.githubusercontent.com/fwmini/kangml.sh/main/signer.zip
 unzip -o signer.zip >/dev/null 2>&1
 mv /APP/kangml/dist/kangml.apk /APP/kangml.apk
 java -jar signapk.jar testkey.x509.pem testkey.pk8 /APP/kangml.apk /APP/kangml_sign.apk >/dev/null 2>&1
