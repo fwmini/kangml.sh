@@ -109,12 +109,12 @@ echo "已经更新完毕！"
 
 Install_Fuzai()
 {
-wget -q https://raw.githubusercontent.com/fwmini/kangml.sh/main/kangfz.sh
+wget -q https:/raw.githubusercontent.com/fwmini/kangml.sh/main/kangfz.sh
 }
 
 Install_App()
 {
-wget -q https://raw.githubusercontent.com/fwmini/kangml.sh/main/kangapp.sh
+wget -q https:/raw.githubusercontent.com/fwmini/kangml.sh/main/kangapp.sh
 }
 
 Install_Auth()
